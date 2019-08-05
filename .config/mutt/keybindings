@@ -1,0 +1,11 @@
+bind pager j next-line
+bind pager k previous-line
+bind pager g top
+bind pager G bottom
+bind index,pager B sidebar-toggle-visible
+bind index,pager \cP sidebar-prev
+bind index,pager \cN sidebar-next
+bind index,pager \cO sidebar-open
+bind index,pager I imap-fetch-mail
+
+# vi: ft=muttrc ts=4 sw=4 sts=4 et

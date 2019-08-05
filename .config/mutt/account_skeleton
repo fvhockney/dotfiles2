@@ -1,0 +1,34 @@
+## Receive
+set imap_user = <login_name_or_address>
+set imap_pass = `pass show <path/in/password/store`
+set folder = "imaps://<server-folder>:993"
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+
+## Send
+set smtp_url = "smtps://<username>@<server>:465"
+set smtp_pass = `pass show <path/in/password/store`
+set realname = "<Real Name>"
+set from = "<email_displayed_in_from_line>"
+set hostname = "<hostname_ex_google.com>"
+set signature = "<Name>"
+set use_from = yes
+set envelope_from = yes
+
+## Connection
+source ./ssl_hardener
+
+## PGP
+set pgp_timeout = 1800
+set pgp_good_sign = "gpg: (Good signature from) "
+set pgp_self_encrypt
+set pgp_default_key = "<Override_Default_Key>"
+set pgp_sign_as = "<Override_Default_Siging_Key>"
+set crypt_replyencrypt
+set crypt_verify_sig
+
+## Hook
+account-hook $folder "set imap_user=<username> imap_pass=`pass show <path/in/password/store>`"
+
+# vi: ft=muttrc ts=4 sw=4 sts=4 et

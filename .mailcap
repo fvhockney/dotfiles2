@@ -1,0 +1,17 @@
+application/pdf; ~/bin/mutt_bgrun xpdf '%s';
+x-unknown/pdf; ~/bin/mutt_bgrun xpdf '%s';
+
+text/html; /usr/bin/firefox %s > /dev/null 2>&1; needsterminal
+text/html; w3m -I %{charset} -O 'UTF-8' -T text/html -graph -o alt_entity=0 -dump %s; copiousoutput
+application/msword; ~/bin/mutt_bgrun /usr/bin/libreoffice '%s'; test=test -n "$DISPLAY"; nametemplate=%s.doc
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; ~/bin/mutt_bgrun /usr/bin/libreoffice '%s'; test=test -n "$DISPLAY"; nametemplate=%s.docx
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; ~/bin/mutt_bgrun /usr/bin/libreoffice '%s'; test=test -n "$DISPLAY"; nametemplate=%s.xlsx
+application/vnd.ms-excel; ~/bin/mutt_bgrun /usr/bin/libreoffice '%s'; test=test -n "$DISPLAY"; nametemplate=%s.xls
+
+application/vnd.openxmlformats-officedocument.presentationml.presentation; ~/bin/mutt_bgrun /usr/bin/libreoffice '%s'; test=test -n "$DISPLAY"; nametemplate=%s.pptx
+application/vnd.ms-powerpoint; ~/bin/mutt_bgrun /usr/bin/libreoffice '%s'; test=test -n "$DISPLAY"; nametemplate=%s.ppt
+
+# image/jpeg; ~/bin/mutt_bgrun feh '%s';
+# image/png;  ~/bin/mutt_bgrun feh '%s';
+
+# audio/mpeg; /usr/bin/mpg123 '%s';

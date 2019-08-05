@@ -1,0 +1,26 @@
+## General
+source "./general_settings"
+
+## Keybindings
+source "./keybindings"
+
+## GPG
+source "./gpg.rc"
+
+## Macros
+source "./macros"
+
+## Theme
+source ~/.config/mutt/themes/solarized-dark
+
+## Aliases
+source ./aliases
+
+## Khard integration
+set query_command = "khard email --parsable %s"
+bind editor <Tab> complete-query
+bind editor ^T complete
+
+## Main Email Zoho
+source "~/.config/mutt/main-personal"
+folder-hook $folder 'source ~/.config/mutt/main-personal'

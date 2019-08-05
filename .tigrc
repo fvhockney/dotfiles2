@@ -1,0 +1,4 @@
+color cursor    yellow black
+color title-focus   cyan black bold
+color title-blur    cyan black bold
+

@@ -1,0 +1,75 @@
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+URxvt.font: xft:inconsolata:size=13
+Urxvt.letterSpace: -1
+
+! Disable printing the termianl contents when pressing PrintScreen
+URxvt.print-pipe: "cat > /dev/null"
+
+URxvt.scrollBar: false
+
+
+#define S_black     #48483e
+#define S_blackl    #76715e
+#define S_red       #dc2566
+#define S_redl      #fa2772
+#define S_green     #efc029
+#define S_greenl    #a7e22e
+#define S_yellow    #d4c96e
+#define S_yellowl   #e7db75
+#define S_blue      #55bcce
+#define S_bluel     #66d9ee
+#define S_magenta   #9358fe
+#define S_magental  #ae82ff
+#define S_cyan      #56b7a5
+#define S_cyanl     #66efd5
+#define S_white     #acada1
+#define S_whitel    #cfd0c2
+
+*background:    [70]#272822
+*foreground:    #f1ebeb
+
+*cursorColor: #f1ebeb 
+
+! dark/light
+! black
+*color0: S_black
+*color8: S_blackl
+
+! red
+*color1: S_red
+*color9: S_redl
+
+! green
+*color2: S_green
+*color10: S_greenl
+
+! yellow
+*color3: S_yellow
+*color11: S_yellowl
+
+! blue
+*color4: S_blue
+*color12: S_bluel
+
+! magenta
+*color5: S_magenta
+*color13: S_magental
+
+! cyan
+*color6: S_cyan
+*color14: S_cyanl
+
+! white
+*color7: S_white
+*color15: S_whitel

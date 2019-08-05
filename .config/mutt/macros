@@ -1,0 +1,7 @@
+macro pager \cb "<pipe-message>urlscan<Enter>"
+macro index,pager A \
+    "<pipe-message>khard add-email<return>" \
+    "add the sender email address to khard"
+#macro index I  "<imap-fetch-mail>"
+
+# vi: ft=muttrc ts=4 sw=4 sts=4 et

@@ -1,0 +1,54 @@
+set editor = "vim +13 -c 'set nobackup' -c 'set noswapfile' -c 'set nowritebackup' -c 'set tw=72 ft=mail noautoindent'"
+set mailcap_path = ~/.mailcap
+set header_cache = ~/.config/mutt/cache/headers
+set message_cachedir = ~/.config/mutt/cache/bodies
+set message_cache_clean
+set tmpdir = ~/.config/mutt/temp
+set pipe_decode
+set thorough_search
+set beep_new
+set text_flowed
+set uncollapse_jump
+set sort_re
+set pager_stop
+set smart_wrap
+set tilde
+unset markers
+set sig_dashes
+set envelope_from
+set askcc
+set askbcc
+set fcc_attach
+set mime_forward
+set mime_forward_rest
+set forward_format = "Fwd: %s"
+set forward_decode
+set attribution = "On %d, %n wrote: "
+set include
+set forward_quote
+set reverse_name
+set reply_to
+set menu_scroll
+set quote_regexp ="^( {0,4}[>|:#%] {0,4}[a-z0-9]+[>|]+)+"
+set status_on_top
+set pager_context = 5
+set quit
+set reverse_alias
+set sort_alias = alias
+set imap_check_subscribed
+set imap_keepalive = 300
+unset imap_passive
+set mail_check = 90
+set timeout = 15
+set mbox_type = Maildir
+set send_charset = "utf-8"
+set edit_headers = yes
+alternative_order text/plain text/html
+auto_view text/html
+set sort = threads
+set sort_aux = reverse-last-date-received
+set pager_index_lines = 10
+set auto_tag
+set new_mail_command = "notify-send 'New Email' '%n new messages, %u unread.' &"
+
+# vi: ft=muttrc ts=4 sw=4 sts=4 et
