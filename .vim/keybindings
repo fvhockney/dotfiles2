@@ -29,4 +29,7 @@ inoremap <silent> <expr><CR>
     \ pumvisible() ?
     \ deoplete#close_popup() : "\<CR>"
 
+" Find Todos and display in an fzf list
+command! -bang -nargs=* Todos
+    \ call fzf#vim#ag('TODO:|BUG:|FIXME:', {'window': 'bo 10new'}, <bang>0)
 " vim: set ft=vim:

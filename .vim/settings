@@ -89,7 +89,7 @@ let g:python3_host_prog = exepath('python3')
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-"call deoplete#custom#option( 'auto_complete', v:false )
+call deoplete#custom#option( 'auto_complete', v:false )
 
 " gutentags_plug & gutentags
 "let g:gutentags_cache_dir = expand('~/.cache/tags')
