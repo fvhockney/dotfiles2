@@ -77,9 +77,9 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|lib|dist|vendor)$'
 set hidden
 let g:LanguageClient_serverCommands = {
     \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'vue': ['vls'],
     \ }
 " if executable('javascript-typescript-stdio')
+"    \ 'vue': ['vls'],
 "     let g:LanguageClient_serverCommands['javascript'] = exepath('javascript-typescript-stdio')
 " endif
 
