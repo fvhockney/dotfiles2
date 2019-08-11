@@ -77,9 +77,9 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|lib|dist|vendor)$'
 set hidden
 let g:LanguageClient_serverCommands = {
     \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'vue': ['vls'],
     \ }
 " if executable('javascript-typescript-stdio')
+"    \ 'vue': ['vls'],
 "     let g:LanguageClient_serverCommands['javascript'] = exepath('javascript-typescript-stdio')
 " endif
 
@@ -89,7 +89,7 @@ let g:python3_host_prog = exepath('python3')
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-"call deoplete#custom#option( 'auto_complete', v:false )
+call deoplete#custom#option( 'auto_complete', v:false )
 
 " gutentags_plug & gutentags
 "let g:gutentags_cache_dir = expand('~/.cache/tags')
