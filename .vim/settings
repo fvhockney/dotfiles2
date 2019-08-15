@@ -89,7 +89,20 @@ let g:python3_host_prog = exepath('python3')
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option( 'auto_complete', v:false )
+set completeopt=longest,menuone,preview
+let g:deoplete#sources = {}
+let g:deoplete#sources['javascript.jsx'] = ["file","ultisnips"]
+let g:deoplete#sources['vue'] = ["file","ultisnips"]
+"call deoplete#custom#option( 'auto_complete', v:false )
+
+" ultisnips
+let g:UltiSnipsEditSplit="horizontal"
+let g:UltiSnipsSnippetDirectories=["UltiSnips","personalultisnips"]
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-l>"
+let g:UltiSnipsJumpBackwardTrigger="<C-h>"
+
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " gutentags_plug & gutentags
 "let g:gutentags_cache_dir = expand('~/.cache/tags')

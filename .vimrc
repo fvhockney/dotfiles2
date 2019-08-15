@@ -31,7 +31,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' }
-" Plugin 'valloric/youcompleteme'
 Plug 'vim-latex/vim-latex', { 'for': 'tex' }
 " Plugin 'xuhdev/vim-latex-live-preview'
 "Plug 'ludovicchabant/vim-gutentags'
@@ -43,6 +42,7 @@ else
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 

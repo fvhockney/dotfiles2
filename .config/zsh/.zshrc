@@ -96,3 +96,5 @@ alias clr="clear"
 alias abook="abook --config $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_CACHE_HOME/abook/adressbook"
 alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"
 alias config='/usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

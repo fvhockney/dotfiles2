@@ -1,2 +1,9 @@
-plugged
-.netrwhist
+*
+!airline
+!colors
+!.gitignore
+!keybindings
+!personalultisnips
+!settings
+!templates
+!autoload
