@@ -11,6 +11,9 @@ set encoding=utf-8
 
 set nowritebackup "needed for watch tasks
 
+" Add recursive path to path
+set path+=**
+
 " Show numbers
 set nu
 set linebreak
@@ -97,12 +100,20 @@ let g:deoplete#sources['vue'] = ["file","ultisnips"]
 
 " ultisnips
 let g:UltiSnipsEditSplit="horizontal"
-let g:UltiSnipsSnippetDirectories=["UltiSnips","personalultisnips"]
+let g:UltiSnipsSnippetsDir=expand("~/.vim/UltiSnips")
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-l>"
 let g:UltiSnipsJumpBackwardTrigger="<C-h>"
 
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Vanilla Tags
+" - use <C-]> to go to tag
+" - use <g><C-]> to go to tag list
+" - use <C-t> to go back in tag stack
+command! MakeTags !ctags -R .
+
 
 " gutentags_plug & gutentags
 "let g:gutentags_cache_dir = expand('~/.cache/tags')

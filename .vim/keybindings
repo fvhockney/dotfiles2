@@ -24,11 +24,6 @@ nnoremap <silent> gr :call LanguageClient#textDocument_references()<CR>
 nnoremap <silent> <leader>ps :call LanguageClient#workspace_symbol()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
-" Deoplete Remapping
-inoremap <silent> <expr><CR>
-    \ pumvisible() ?
-    \ deoplete#close_popup() : "\<CR>"
-
 " Find Todos and display in an fzf list
 command! -bang -nargs=* Todos
     \ call fzf#vim#ag('TODO:|BUG:|FIXME:', {'window': 'bo 10new'}, <bang>0)
