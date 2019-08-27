@@ -42,6 +42,7 @@ else
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'SirVer/ultisnips'
 call plug#end()
 
