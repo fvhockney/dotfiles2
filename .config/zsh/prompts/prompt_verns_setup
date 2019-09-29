@@ -1,0 +1,31 @@
+autoload -Uz add-zsh-hook
+
+prompt_verns_setup () {
+
+    prompt_opts=(subst percent cr)
+    PS1='%0(?..%F{red}[%?]%f )%(!.%F{red}.%F{green})%n%f%U@%M%u:%F{blue}%~%f:%1(j.%j.)%F{yellow}${ISGIT}%f%(!.%F{red}#.%F{green}>)%f'
+    RPS1='%B%F{yellow}${GITBRANCH}%f%b %0(?.%F{green}.%F{red})%D %*%f'
+}
+
+is_git_repo () {
+    git status -s 2>/dev/null 1>/dev/null
+    CODE=$?
+    if [ $CODE -eq 0 ]; then
+        ISGIT=$(print -n "\ue725")
+    else
+        ISGIT=""
+    fi
+}
+
+git_branch () {
+        GITBRANCH=$(git branch --show-current 2>/dev/null )
+}
+
+add-zsh-hook chpwd git_branch
+if [[ $IS_TTY -eq 1 ]]; then
+    add-zsh-hook chpwd is_git_repo
+fi
+
+prompt_verns_setup "$@"
+
+# vim: set ft=zsh:
