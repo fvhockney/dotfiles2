@@ -1,12 +1,12 @@
 set sidebar_folder_indent = yes
 set sidebar_short_path = yes
-set sidebar_delim_chars = "/."
-set sidebar_indent_string = '  '
+set sidebar_sort_method = path
+#set sidebar_delim_chars = "/."
+#set sidebar_indent_string = '  '
 color sidebar_indicator black white
 color sidebar_highlight black color8
 color sidebar_divider color8 black
 color sidebar_flagged red black
 color sidebar_new green black
 color sidebar_ordinary color245 default
-
 # vim: syntax=neomuttrc

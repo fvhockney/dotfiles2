@@ -1,0 +1,53 @@
+snippet todo "// TODO:"
+// TODO: ${0} | `date +"%d.%m.%y %T"` | `whoami` 
+endsnippet
+
+snippet fixme "// FIXME:"
+// FIXME: ${0} | `date +"%d.%m.%y %T"` | `whoami` 
+endsnippet
+
+snippet log "console.log()"
+console.log(${0})
+endsnippet
+
+snippet warn "console.warn()"
+console.warn(${0})
+endsnippet
+
+snippet error "console.error()"
+console.error(${0})
+endsnippet
+
+snippet info "console.info()"
+console.info(${0})
+endsnippet
+
+snippet if "if..."
+if (${1}) {
+  ${0}
+}
+endsnippet
+
+snippet ifel "if...else..."
+if (${1}) {
+  ${2}
+} else {
+  ${0}
+}
+endsnippet
+
+snippet elif "else if..."
+else if (${1}) {
+  ${0}
+}
+endsnippet
+
+snippet else "else"
+else {
+  ${0}
+}
+endsnippet
+
+snippet tern "?:"
+${1} ? ${2} : ${3}
+endsnippet

@@ -1,0 +1,36 @@
+extends javascript
+
+snippet ofn "name: function() {},"
+${1:name}: ${2}function(${3}) \{
+  ${0}
+},
+endsnippet
+
+snippet section "methods/computed/...:{}"
+${1}: \{
+  ${0}
+},
+endsnippet
+
+snippet prop "prop"
+${1:propName}: \{
+  type: ${2:Array,String...},
+  required: ${3:false,
+  default: ${4:type}},
+},${0}
+endsnippet
+
+snippet scaffold "scaffold vue temp"
+<template>
+${0}
+</template>
+
+<script>
+export default \{
+  name: '${1:name}',
+}
+</script>
+
+<style ${2:scoped} lang="${3:scss}">
+</style>
+endsnippet

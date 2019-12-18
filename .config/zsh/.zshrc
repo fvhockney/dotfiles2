@@ -1,10 +1,11 @@
 autoload -Uz promptinit && promptinit
-#prompt walters
 prompt verns
 
 autoload -Uz compinit && compinit
 setopt COMPLETE_ALIASES
 zstyle :compinstall filename '/home/fvhockney/.config/zsh/.zshrc'
+
+ttyctl -f
 
 setopt inc_append_history
 HISTFILE=~/.config/zsh/.zhistory
@@ -14,6 +15,8 @@ setopt autocd extendedglob nomatch notify
 source /usr/share/fzf/completion.zsh
 export FZF_COMPLETION_TRIGGER='__'
 export FZF_COMPLETION_OPTS='+c -x'
+
+# set vim like bindings
 bindkey -v
 
 

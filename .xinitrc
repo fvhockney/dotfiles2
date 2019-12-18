@@ -49,4 +49,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 xbindkeys
+if [ $(hostname) = 'bigkitty' ]; then
+  nvidia-settings --load-config-only
+fi
+$HOME/.config/screenlayouts/home.sh
 exec i3

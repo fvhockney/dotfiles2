@@ -1,0 +1,12 @@
+[merge]
+	tool = diffconflicts
+[mergetool "diffconflicts"]
+	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+	keepBackup = false
+[alias]
+	tracked = ls-tree -r HEAD --name-only
+	stop-tracking = rm --cached
+
+[include]
+    path = ~/.config/gitconfig/gitconfig.local

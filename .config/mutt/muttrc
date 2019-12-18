@@ -19,12 +19,9 @@ source ./aliases
 ## Sidebar
 source ./sidebar
 
-## Khard integration
-set query_command = "khard email --parsable %s"
-bind editor <Tab> complete-query
-bind editor ^T complete
-
 ## Main Email Zoho
 source "~/.config/mutt/main-personal"
-folder-hook $folder 'source ~/.config/mutt/main-personal'
-folder-hook $folder 'source ~/.config/mutt/wsu'
+#source "~/.config/mutt/wsu"
+
+#folder-hook $folder 'source ~/.config/mutt/main-personal'
+#folder-hook $folder 'source ~/.config/mutt/wsu'

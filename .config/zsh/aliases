@@ -1,14 +1,12 @@
 alias l="ls -laAhF --color=auto --group-directories-first"
 alias ls="ls --color=auto"
-alias zshconfig="vim ~/.config/zsh/.zshrc"
+alias zshconfig="vim $HOME/.config/zsh/.zshrc"
 alias dc="docker-compose"
 alias vi="vim"
 alias clr="clear"
-alias abook="abook --config $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_CACHE_HOME/abook/adressbook"
-alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias update_prompt="sudo cp $ZDOTDIR/prompts/prompt_verns_setup /usr/share/zsh/functions/Prompts/prompt_verns_setup"
-alias mod_prompt="vim $ZDOTDIR/prompts/prompt_verns_setup"
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+alias _='sudo'
+alias reloadconfig="source $HOME/.zsh/.zshrc"
 
 alias premove='sudo pacman -Rs'
 #alias pcleanup='sudo pacman -Rs $(pacman -Qtdq)'

@@ -1,54 +1,98 @@
+# Configure Vim for Mail and security (no backups saved while writing)
 set editor = "vim +13 -c 'set nobackup' -c 'set noswapfile' -c 'set nowritebackup' -c 'set tw=72 ft=mail noautoindent'"
+
+# Folder/File Locations
 set mailcap_path = ~/.mailcap
 set header_cache = ~/.config/mutt/cache/headers
 set message_cachedir = ~/.config/mutt/cache/bodies
-set message_cache_clean
 set tmpdir = ~/.config/mutt/temp
-set pipe_decode
-set thorough_search
-set beep_new
-set text_flowed
-set uncollapse_jump
-set sort_re
-set pager_stop
-set smart_wrap
-set tilde
-unset markers
-set sig_dashes
-set envelope_from
-set askcc
-set askbcc
-set fcc_attach
-set mime_forward
-set mime_forward_rest
-set forward_format = "Fwd: %s"
-set forward_decode
-set attribution = "On %d, %n wrote: "
-set include
-set forward_quote
-set reverse_name
-set reply_to
-set menu_scroll
-set quote_regexp ="^( {0,4}[>|:#%] {0,4}[a-z0-9]+[>|]+)+"
-set status_on_top
-set pager_context = 5
-set quit
-set reverse_alias
-set sort_alias = alias
+
+# Check Mail IMAP
 set imap_check_subscribed
 set imap_keepalive = 300
 unset imap_passive
 set mail_check = 90
 set timeout = 15
+
+# new forlders should be type Maildir
 set mbox_type = Maildir
+
+# Keep body cache in sync if other MUA's delete message from server
+set message_cache_clean
+
+# Weeds and tries to decode message before sending to external program
+set pipe_decode
+
+# Beep when notifying of new mail
+set beep_new
+
+# makes everything look prettier ( text/plain;format=flowed )
+# only works for newly composed messages
+set text_flowed
+
+# jump to next uncread message in thread when thread is uncollapsed
+set uncollapse_jump
+
+# need for sidebar sorting
+set sort_re
+
+# Don't show indicator of wrapped lines, just wrap them
+unset markers
+
+#set envelope_from
+
+# Ask if I want to cc or bcc someone
+set askcc
+set askbcc
+
+# Send forward mailes as a MIME attatchement (instead of quoted text)
+set mime_forward = ask-yes
+
+# Subject line for forwarded emails
+set forward_format = "Fwd: %s"
+
+#set include
+#set reply_to
+
+# scroll down one line at a time
+set menu_scroll
+set quote_regexp ="^( {0,4}[>|:#%] {0,4}[a-z0-9]+[>|]+)+"
+
+# put status line on top (useful for reading mails)
+set status_on_top
+
+# show 5 lines of context (e.g., when reading mail, see 5 mails in the index)
+set pager_context = 5
+
+# just quit
+set quit = yes
+
+# Show familiar name instead of email if I have them as an alias
+# ex alias juser abd40325@somewhere.net (Joe User)
+set reverse_alias
+
+# If you can't read utf-8, we have problems
 set send_charset = "utf-8"
+
+# Let me edit headers when writing a mail if I want
 set edit_headers = yes
+
+# If there is a text/plain, I want to see it, don't bother with the html
+# If not, then give me the html, but convert it to plain first
 alternative_order text/plain text/html
 auto_view text/html
+
+# Sorting sucks, but I want threads!
 set sort = threads
 set sort_aux = reverse-last-date-received
+
+# show 10 lines of the index pager
 set pager_index_lines = 10
+
+# apply taggable actions (moving, deleting, ect) to all tagged items
 set auto_tag
+
+# What to do when I get a new mail
 set new_mail_command = "notify-send 'New Email' '%n new messages, %u unread.' &"
 
 # vi: ft=muttrc ts=4 sw=4 sts=4 et

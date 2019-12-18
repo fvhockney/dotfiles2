@@ -81,20 +81,20 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspaces for multi-monitors
-workspace 1 output HDMI1
-workspace 2 output HDMI1
-workspace 3 output HDMI1
-workspace 4 output HDMI1
-workspace 5 output HDMI1
-workspace 6 output eDP1 
-workspace 7 output eDP1
-workspace 8 output eDP1
-workspace 9 output eDP1
-workspace 10 output eDP1
-workspace mutt output DP1
-workspace irc output DP1
-workspace cal output DP1
-workspace scratch output DP1
+workspace 1 output HDMI-0
+workspace 2 output HDMI-0
+workspace 3 output HDMI-0
+workspace 4 output HDMI-0
+workspace 5 output HDMI-0
+workspace 6 output DVI-D-0 
+workspace 7 output DVI-D-0
+workspace 8 output DVI-D-0
+workspace 9 output DVI-D-0
+workspace 10 output DVI-D-0
+workspace mutt output VGA-0
+workspace irc output VGA-0
+workspace cal output VGA-0
+workspace scratch output VGA-0
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -132,6 +132,17 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec $HOME/bin/leave.sh
 
+# make mark on focused window
+mode "marks [g]oto [s]et [c]lear [r]eset_all" {
+    bindsym s exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
+    bindsym g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Gogo: '
+    bindsym c exec i3-input -F 'unmark %s' -l 1 -P 'Unmark: '
+    bindsym r unmark
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+bindsym $mod+Shift+m mode "marks [g]oto [s]et [c]lear [r]eset_all"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -155,8 +166,8 @@ bindsym $mod+r mode "resize"
 # Sets Background with nitrogen
 exec --no-startup-id nitrogen --restore
 
-# Start compton
-exec --no-startup-id compton -b
+# Start picom
+exec --no-startup-id picom -b
 
 # Set workspaces for work
 #exec --no-startup-id $HOME/bin/seti3layouts
