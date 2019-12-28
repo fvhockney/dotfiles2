@@ -53,4 +53,5 @@ if [ $(hostname) = 'bigkitty' ]; then
   nvidia-settings --load-config-only
 fi
 $HOME/.config/screenlayouts/home.sh
+i3-config-builder
 exec i3

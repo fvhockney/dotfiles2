@@ -1,0 +1,12 @@
+# make mark on focused window
+mode "marks [g]oto [s]et [c]lear [r]eset_all" {
+    bindsym s exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
+    bindsym g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Gogo: '
+    bindsym c exec i3-input -F 'unmark %s' -l 1 -P 'Unmark: '
+    bindsym r unmark
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+bindsym $mod+Shift+m mode "marks [g]oto [s]et [c]lear [r]eset_all"
+
