@@ -18,3 +18,5 @@ is_tty () {
 }
 
 is_tty
+
+export PATH="/home/fvhockney/.config/cargo/bin:$PATH"
