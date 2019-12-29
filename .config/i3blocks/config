@@ -46,14 +46,14 @@ command=~/.config/i3blocks/blocklets/memory/memory
 label= 
 interval=30
 
+[volume-pulseaudio]
+command=~/.config/i3blocks/blocklets/volume-pulseaudio/volume-pulseaudio
+interval=once
+signal=1
+
 [time]
 command=~/.config/i3blocks/blocklets/time/time
 interval=1
 STRFTIME_FORMAT=%H:%M %d-%m-%Y
 TZONES=$DEFAULT_TZ
 TZ_LABELS=Berlin,
-
-[volume-pulseaudio]
-command=~/.config/i3blocks/blocklets/volume-pulseaudio/volume-pulseaudio
-interval=once
-signal=1
