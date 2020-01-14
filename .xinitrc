@@ -52,9 +52,6 @@ xbindkeys
 if [ $(hostname) = 'bigkitty' ]; then
   nvidia-settings --load-config-only
 fi
-if command -v lxqt-policykit-agent > /dev/null 2>&1; then
-    lxqt-policykit-agent
-fi
 $HOME/.config/screenlayouts/home.sh
 i3-config-builder
 exec i3
