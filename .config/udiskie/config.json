@@ -1,0 +1,16 @@
+{
+    "program_options": {
+        "tray": true,
+        "menu": "nested",
+        "automount": false,
+        "notify": true,
+        "password_cache": false
+    },
+    "device_config": [
+        {
+            "id_uuid": "e3cecf8d-167f-47e5-8c1d-7947d87c1d3c",
+            "automount": false
+        }
+    ],
+    "quickmenu_actions": "all"
+}
