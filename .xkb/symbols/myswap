@@ -1,6 +1,0 @@
-partial alphanumeric_keys
-xkb_symbols "programmer" {
-    include "de(basic)"
-    key <AC10> { [ braceleft, bracketleft, dead_doubleacute, dead_belowdot ] };
-    key <AC11> { [ braceright, bracketright, dead_circumflex, dead_caron ] };
-};

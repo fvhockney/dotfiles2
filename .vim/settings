@@ -48,8 +48,8 @@ let mapleader=","
 filetype plugin indent on
 syntax on
 autocmd FileType vue syntax sync fromstart
+autocmd FileType json syntax match Comment +\/\/.\+$+
 autocmd BufNewFile,BufRead *.vue set ft=vue
-autocmd BufNewFile *.vue 0r ~/.vim/templates/skeleton.vue
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0 
 let g:vue_disable_pre_processors=1
 
@@ -76,71 +76,8 @@ let g:NERDTreeIndicatorMapCustom = {
 " CtlP
 let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|lib|dist|vendor)$'
 
-" LSP
-set hidden
-"let g:LanguageClient_serverCommands = {
-"    \ 'javascript': ['javascript-typescript-stdio'],
-"    \ }
-" if executable('javascript-typescript-stdio')
-"    \ 'vue': ['vls'],
-"     let g:LanguageClient_serverCommands['javascript'] = exepath('javascript-typescript-stdio')
-" endif
-
-let g:LanguageClient_serverCommands = {
-            \ 'vue': ['vls']
-            \ }
 " python path for deoplete and yarp
 set pyxversion=3
 let g:python3_host_prog = exepath('python3')
-" ALE
-function! LocalEslintLayout( buffer )
-    let b=a:buffer
-    execute "!npx eslint --fix --fix-type=layout" . " " . bufname(b)
-endfunction
-let g:ale_fixers = {
-\   'javascript': [
-\       'LocalEslintLayout',
-\   ],
-\   'vue': [
-\       'LocalEslintLayout',
-\   ],
-\}
-
-" CoC
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
-
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-"autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-
-" ultisnips
-"let g:UltiSnipsEditSplit="horizontal"
-"let g:UltiSnipsSnippetsDir=expand("~/.vim/UltiSnips")
-"let g:UltiSnipsSnippetDirectories=["UltiSnips"]
-
-" Vanilla Tags
-" - use <C-]> to go to tag
-" - use <g><C-]> to go to tag list
-" - use <C-t> to go back in tag stack
-command! MakeTags !ctags -R .
-
-" gutentags_plug & gutentags
-"let g:gutentags_cache_dir = expand('~/.cache/tags')
-"let g:gutentags_modules = ['ctags', 'gtags_cscope']
-"let g:gutentags_project_root = ['.root','.git']
-"let g:gutentags_ctags_exclude = [ '@.gitignore', 'lib', 'dist', 'package.json', 'package-lock.json' ]
 
 " vim: set ft=vim:

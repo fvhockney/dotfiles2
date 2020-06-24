@@ -1,0 +1,31 @@
+Config { 
+
+   -- appearance
+     font =         "Sauce Code Pro Nerd Font Complete 12"
+   , bgColor =      "black"
+   , fgColor =      "#646464"
+   , position =     Top
+   , border =       BottomB
+   , borderColor =  "#646464"
+
+   -- layout
+   , sepChar =  "%"   -- delineator between plugin names and straight text
+   , alignSep = "}{"  -- separator between left-right alignment
+   , template = "%UnsafeStdinReader%}{ %date% || %kbd% | %locks% "
+   , lowerOnStart =     True    -- send to bottom of window stack on start
+   , hideOnStart =      False   -- start with window unmapped (hidden)
+   , allDesktops =      True    -- show on all desktops
+   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)
+   , pickBroadest =     False   -- choose widest display (multi-monitor)
+   , persistent =       True    -- enable/disable hiding (True = disabled)
+   , commands = 
+
+        -- weather monitor
+        [ Run Locks
+        , Run UnsafeStdinReader
+        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 50
+        , Run Kbd            [ ("de" , "<fc=#00008B>DE</fc>")
+                             , ("de_prog", "<fc=#8B0000>DE_PROG</fc>")
+                             ]
+        ]
+   }

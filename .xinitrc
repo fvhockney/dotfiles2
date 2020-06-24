@@ -56,10 +56,15 @@ if [ $(command -v udiskie) ]; then
     udiskie &
 fi
 
+if [ $(command -v pasystray) ]; then
+    pasystray &
+fi
+
 xbindkeys
 if [ $(hostname) = 'bigkitty' ]; then
   nvidia-settings --load-config-only
 fi
-$HOME/.config/screenlayouts/home.sh
-i3-config-builder
-exec i3
+#$HOME/.config/screenlayouts/two-large-home.sh
+#i3-config-builder
+#exec i3
+xmonad

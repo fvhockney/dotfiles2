@@ -16,7 +16,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'gko/vim-coloresque'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'tpope/vim-surround'
@@ -30,24 +30,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
-Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' }
-Plug 'vim-latex/vim-latex', { 'for': 'tex' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'easymotion/vim-easymotion'
-"Plug 'ervandew/supertab'
-" Plugin 'xuhdev/vim-latex-live-preview'
-"Plug 'ludovicchabant/vim-gutentags'
-"Plug 'skywind3000/gutentags_plus'
-"if has('nvim')
-"    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"else
-"    Plug 'Shougo/deoplete.nvim'
-"    Plug 'roxma/nvim-yarp'
-"    Plug 'roxma/vim-hug-neovim-rpc'
-"endif
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-"Plug 'SirVer/ultisnips'
+"Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 call plug#end()
 
 

@@ -10,3 +10,5 @@
 
 [include]
     path = ~/.config/gitconfig/gitconfig.local
+[core]
+	autocrlf = input

@@ -36,7 +36,7 @@ URxvt.scrollBar: false
 #define S_white     #acada1
 #define S_whitel    #cfd0c2
 
-*background:    [70]#272822
+*background:    #272822
 *foreground:    #f1ebeb
 
 *cursorColor: #f1ebeb 

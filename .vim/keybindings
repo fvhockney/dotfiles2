@@ -14,16 +14,6 @@ autocmd FileType vim              let b:comment_leader = '" '
 noremap <silent> ,ic :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,rc :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
-" LSP Remapping
-"nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-"nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-"nnoremap <silent> gd <Plug>(coc-definition)
-"nnoremap <silent> gi <Plug>(coc-implementation)
-"nnoremap <silent> gs :call LanguageClient#textDocument_documentSymbol()<CR>
-"nnoremap <silent> gr <Plug>(coc-references)
-"nnoremap <silent> <leader>ps :call LanguageClient#workspace_symbol()<CR>
-"nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-
 " Find Todos and display in an fzf list
 command! -bang -nargs=* Todos
     \ call fzf#vim#ag('TODO:|BUG:|FIXME:', {'window': 'bo 10new'}, <bang>0)

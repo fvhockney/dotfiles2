@@ -1,5 +1,5 @@
 # Configure Vim for Mail and security (no backups saved while writing)
-set editor = "vim +13 -c 'set nobackup' -c 'set noswapfile' -c 'set nowritebackup' -c 'set tw=72 ft=mail noautoindent'"
+set editor = "vim +13 -c 'set nobackup' -c 'set noswapfile' -c 'set nowritebackup' -c 'set tw=72 ft=mail noautoindent formatoptions=ant wrapmargin=0'"
 
 # Folder/File Locations
 set mailcap_path = ~/.mailcap

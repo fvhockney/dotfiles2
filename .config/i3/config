@@ -13,8 +13,22 @@ font pango:"Sauce Code Pro Nerd Font Complete" $fontsize
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+for_window [ title="JetBrains Toolbox" ] floating enable
+assign [ title="Franz" ] mutt
+#assign [ class="^jetbrains.*" ] 1
 #01-base
 #Key bindings
+
+bindsym --release Print exec --no-startup-id $HOME/bin/printScreen.sh
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -133,10 +147,14 @@ workspace 7 output DVI-D-0
 workspace 8 output DVI-D-0
 workspace 9 output DVI-D-0
 workspace 10 output DVI-D-0
-workspace mutt output VGA-0
-workspace irc output VGA-0
-workspace cal output VGA-0
-workspace scratch output VGA-0
+workspace mutt output DVI-D-0
+workspace irc output DVI-D-0
+workspace cal output DVI-D-0
+workspace scratch output DVI-D-0
+#workspace mutt output VGA-0
+#workspace irc output VGA-0
+#workspace cal output VGA-0
+#workspace scratch output VGA-0
 # Sets Background with nitrogen
 exec --no-startup-id nitrogen --restore
 
@@ -158,8 +176,8 @@ smart_gaps on
 smart_borders on
 
 # Some color adjustments
-client.focused_inactive #000000 #000000 #000000 #000000 #000000
-client.unfocused        #000000 #000000 #000000 #000000 #000000
+#client.focused_inactive #000000 #000000 #000000 #000000 #000000
+#client.unfocused        #000000 #000000 #000000 #000000 #000000
 
 # Set inner/outer gaps
 gaps inner 3

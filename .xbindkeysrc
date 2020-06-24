@@ -80,6 +80,8 @@
 "firefox"
   XF86Explorer
 
+"pintScreen.sh"
+  Print
 ##################################
 # End of xbindkeys configuration #
 ##################################

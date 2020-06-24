@@ -7,6 +7,8 @@ alias clr="clear"
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias _='sudo'
 alias reloadconfig="source $HOME/.zsh/.zshrc"
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com -4"
+alias pubip6="dig +short AAAA myip.opendns.com @resolver1.opendns.com"
 
 alias premove='sudo pacman -Rs'
 #alias pcleanup='sudo pacman -Rs $(pacman -Qtdq)'

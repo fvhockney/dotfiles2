@@ -1,9 +1,0 @@
-# Sets Background with nitrogen
-exec --no-startup-id nitrogen --restore
-
-# Start picom
-exec --no-startup-id picom -b
-
-# Set workspaces for work
-#exec --no-startup-id $HOME/bin/seti3layouts
-
